@@ -1,45 +1,61 @@
+$color-primary-light: #7ed56f;
+$color-primary: #55c57a;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   padding: 25px;
-  color: #777; }
-
+  color: $color-grey-dark;
+}
 /* Header */
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
 
 .logo-ctn {
   position: absolute;
   top: 40px;
-  left: 40px; }
+  left: 40px;
+}
 
 .logo {
   height: 80px;
   width: 80px;
-  filter: invert(100%) sepia(5%) saturate(3437%) hue-rotate(35deg) brightness(117%) contrast(104%); }
+  filter: invert(100%) sepia(5%) saturate(3437%) hue-rotate(35deg)
+    brightness(117%) contrast(104%);
+}
 
 .box {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+}
 
 .title-ctn {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  /* will remove that little shift at the end of the animation from view */ }
+  /* will remove that little shift at the end of the animation from view */
+}
 
 .title-main {
   display: block;
@@ -48,7 +64,8 @@ body {
   font-weight: 200;
   animation-name: moveInLeft;
   animation-duration: 2s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 .title-sec {
   display: block;
@@ -57,7 +74,8 @@ body {
   font-weight: 200;
   animation-name: moveInRight;
   animation-duration: 2s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 .btn:link,
 .btn:visited {
@@ -68,16 +86,16 @@ body {
   border-radius: 50px;
   transition: all 0.2s;
   position: relative;
-  backface-visibility: hidden; }
-
+  backface-visibility: hidden;
+}
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); }
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); }
-
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -88,49 +106,67 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s; }
-
+  transition: all 0.4s;
+}
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
 
 .head-btn {
   background-color: white;
-  color: #777;
+  color: $color-grey-dark;
   margin-top: 50px;
-  font-size: 0.8rem; }
-
+  font-size: 0.8rem;
+}
 .head-btn::after {
-  background-color: white; }
-
+  background-color: white;
+}
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 1.25s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(-100px);
+  }
+
   80% {
-    transform: translateX(20px); }
+    transform: translateX(20px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateY(-100px); }
+    transform: translateY(-100px);
+  }
+
   80% {
-    transform: translateY(20px); }
+    transform: translateY(20px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px); }
+    transform: translateY(30px);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
