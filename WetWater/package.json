@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^5.0.0"
   },
   "devDependencies": {
@@ -11,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass main.scss style.css -w"
+    "compile:sass": "node-sass sass/main.scss style.css -w"
   },
   "author": "Stephen",
   "license": "ISC"
