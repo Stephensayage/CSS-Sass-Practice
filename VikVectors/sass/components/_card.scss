@@ -1,0 +1,78 @@
+.card {
+  perspective: 250rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &_side {
+    height: 50rem;
+    transition: all 2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    // overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
+    opacity: 0.9;
+
+    &--front {
+      &-1 {
+        background-color: $color-implant-secondary-pink;
+      }
+      &-2 {
+        background-color: $color-implant-secondary-purp;
+      }
+      &-3 {
+        background-color: $color-implant-secondary-blue-dark;
+      }
+      &-4 {
+        background-color: $color-implant-secondary-blue-light;
+      }
+    }
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-implant-secondary-pink,
+          $color-implant-pink
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-implant-secondary-purp,
+          $color-implant-purp
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-implant-secondary-blue-dark,
+          $color-implant-blue-dark
+        );
+      }
+
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-implant-secondary-blue-light,
+          $color-implant-blue-light
+        );
+      }
+    }
+  }
+
+  &:hover &_side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &_side--back {
+    transform: rotateY(0);
+  }
+}
