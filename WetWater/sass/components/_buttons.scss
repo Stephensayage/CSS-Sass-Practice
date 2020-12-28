@@ -47,3 +47,31 @@
   animation: moveInBottom 0.5s ease-out 1.25s;
   animation-fill-mode: backwards;
 }
+
+// Button link
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.2rem;
+    color: $color-btn-link;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-btn-link;
+    padding: 0.3rem;
+    transition: all 0.2s;
+    // backface-visibility: hidden;
+  }
+
+  &:hover {
+    background-color: $color-btn-link;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    // transform: translateY(-0.2rem);
+    border-bottom: none;
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, $alpha: 0.15);
+    transform: translateY(2px);
+  }
+}
