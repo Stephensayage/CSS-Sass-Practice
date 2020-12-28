@@ -1,0 +1,21 @@
+.row {
+  max-width: $grid-width;
+
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-bot-margin;
+  }
+
+  @include clearfix;
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-spacing}) / 2);
+
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-spacing;
+    }
+  }
+}
