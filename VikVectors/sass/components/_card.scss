@@ -6,7 +6,7 @@
 
   &_side {
     height: 50rem;
-    transition: all 2s ease;
+    transition: all 1.2s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -74,5 +74,49 @@
   }
   &:hover &_side--back {
     transform: rotateY(0);
+  }
+
+  &-picture {
+    width: 50%;
+    box-shadow: 0 1.5rem 3rem $color-black;
+    border-radius: 50%;
+    margin: -3rem 0 0 25%;
+    &-1 {
+      background-color: $color-implant-secondary-pink;
+    }
+    &-2 {
+      background-color: $color-implant-secondary-purp;
+    }
+    &-3 {
+      background-color: $color-implant-secondary-blue-dark;
+    }
+    &-4 {
+      background-color: $color-implant-secondary-blue-light;
+    }
+  }
+
+  &-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &-details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        color: $color-grey-light-1;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 01rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-1;
+        }
+      }
+    }
   }
 }
