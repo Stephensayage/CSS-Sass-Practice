@@ -5,4 +5,23 @@
   background-color: white;
   border-radius: 0.2rem;
   padding: 5rem;
+  padding-left: 7rem;
+  font-size: 1.2rem;
+  transform: skewX(-10deg);
+
+  &-shape {
+    width: 10rem;
+    height: 10rem;
+    background-color: yellowgreen;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(10deg);
+  }
+  &-image {
+    width: 100%;
+  }
+  &-text {
+    transform: skewX(10deg);
+  }
 }
