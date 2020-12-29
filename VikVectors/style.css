@@ -106,6 +106,9 @@ body {
 .util-margin-b-sm {
   margin-bottom: 1.5rem; }
 
+.util-margin-t-lrg {
+  margin-top: 5.5rem; }
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -172,6 +175,13 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(2px); }
+
+.btn-pink {
+  border: 1px solid #f72585;
+  color: #f72585; }
+  .btn-pink:hover {
+    background-color: #f72585;
+    color: white; }
 
 .composition {
   position: relative; }
@@ -278,9 +288,34 @@ body {
       color: #f7f7f7;
       text-align: center;
       font-size: 1.3rem;
+      font-weight: 200;
       padding: 01rem; }
       .card-details ul li:not(:last-child) {
         border-bottom: 1px solid #f7f7f7; }
+  .card_cta {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card_price-ctn {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card_price-text {
+    font-size: 1.5rem;
+    font-weight: 300; }
+  .card_price-value {
+    font-size: 5rem;
+    font-weight: 100; }
+
+.review {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 0.2rem;
+  padding: 5rem; }
 
 .header {
   height: 95vh;
@@ -336,3 +371,7 @@ body {
   padding: 20rem 0;
   background-color: #f7f7f7;
   margin-top: -10vh; }
+
+.section-reviews {
+  padding: 10rem 0;
+  background-color: #f7f7f7; }
