@@ -31,5 +31,12 @@
 
 .section-reviews {
   padding: 10rem 0;
-  background-color: $color-grey-light-1;
+  position: relative;
+  margin-top: -9rem;
+  transform: skewY(-6deg);
+
+  & > * {
+    transform: skewY(6deg);
+    // you have to skew the children in the opposite direction so that the cards are straight
+  }
 }
