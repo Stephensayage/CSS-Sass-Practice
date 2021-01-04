@@ -40,3 +40,29 @@
     // you have to skew the children in the opposite direction so that the cards are straight
   }
 }
+
+.section-booking {
+  margin-top: -10rem;
+  padding: 30rem 0;
+  background-color: $color-grey-light-1;
+}
+
+.book {
+  background-image: linear-gradient(
+      100deg,
+      rgba($color-white, 0.5) 0%,
+      rgba($color-white, 0.5) 50%,
+      transparent 50%
+    ),
+    url("https://images.alphacoders.com/102/thumb-1920-1021182.jpg");
+  background-size: 100%;
+  border-radius: 0.2rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.4);
+
+  height: 50rem;
+
+  &-form {
+    width: 50%;
+    padding: 5rem;
+  }
+}
