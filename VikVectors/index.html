@@ -18,6 +18,33 @@
     <title>ViktorVecors Clinic | Enhance Yourself</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation-checkbox" id="nav-checkbox" />
+      <label for="nav-checkbox" class="navigation-btn"
+        ><span class="navigation-icon">&nbsp;</span></label
+      >
+      <div class="navigation-background">&nbsp;</div>
+      <nav class="navigation-ctn">
+        <ul class="navigation-ul">
+          <li class="navigation-li">
+            <a href="#about" class="navigation-link">About</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#offers" class="navigation-link">Implant Types</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#sales" class="navigation-link">Best Sellers</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#reviews" class="navigation-link">Patient Reviews</a>
+          </li>
+          <li class="navigation-li">
+            <a href="#book" class="navigation-link">Book Apt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header-logo-ctn">
         <img
@@ -28,7 +55,7 @@
       </div>
       <div class="box">
         <h1 class="title-ctn">
-          <span class="title-main">Viktor Vectors</span>
+          <span class="title-main">Viktor Vector's</span>
           <span class="title-sec">Enhance Yourself</span>
         </h1>
         <a href="#offers" class="btn head-btn btn-animated"
@@ -37,7 +64,7 @@
       </div>
     </header>
     <main>
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="util-center-text util-margin-b-lrg">
           <h2 class="heading-secondary">Why use a RipperDoc?</h2>
         </div>
@@ -166,7 +193,7 @@
           </div>
         </div>
       </section>
-      <section class="section-sales">
+      <section class="section-sales" id="sales">
         <div class="util-center-text util-margin-b-lrg">
           <h2 class="heading-secondary">Our most popular implants</h2>
         </div>
@@ -303,7 +330,7 @@
         </div>
       </section>
 
-      <section class="section-reviews">
+      <section class="section-reviews" id="reviews">
         <div class="reviews-video">
           <video class="reviews-video-content" autoplay muted loop>
             <source src="/assets/Circuit - 33577.mp4" type="video/mp4" />
