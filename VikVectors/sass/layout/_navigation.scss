@@ -32,6 +32,7 @@
     top: 6.5rem;
     right: 6.5rem;
     background-image: radial-gradient($color-purple-dark, $color-purple-light);
+    opacity: 0.9;
     z-index: 2000;
     transition: transform 0.7s ease;
   }

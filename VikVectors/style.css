@@ -555,6 +555,7 @@ h2 {
   top: 6.5rem;
   right: 6.5rem;
   background-image: radial-gradient(#3726b5, #6a61ae);
+  opacity: 0.9;
   z-index: 2000;
   transition: transform 0.7s ease; }
 
