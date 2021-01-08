@@ -9,6 +9,10 @@
   font-size: 1.2rem;
   transform: skewX(-10deg);
 
+  @include media(phone) {
+    transform: none;
+  }
+
   &-shape {
     width: 10rem;
     height: 10rem;
@@ -17,11 +21,18 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(10deg);
+    @include media(phone) {
+      margin-right: 1rem;
+      transform: none;
+    }
   }
   &-image {
     width: 100%;
   }
   &-text {
     transform: skewX(10deg);
+    @include media(phone) {
+      transform: none;
+    }
   }
 }

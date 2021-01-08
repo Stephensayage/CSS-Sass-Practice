@@ -5,24 +5,51 @@
 
   &:not(:last-child) {
     margin-bottom: $grid-bot-margin;
+
+    @include media(tablet-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   @include clearfix;
 
+  @include media(tablet-port) {
+    width: 100% !important;
+  }
+
   .col-1-of-2 {
     width: calc((100% - #{$grid-spacing}) / 2);
     float: left;
+    @include media(phone) {
+      width: calc((100% - #{$grid-spacing}) / 1);
+      margin-bottom: 10rem;
+      margin-left: 3rem;
+    }
 
     &:not(:last-child) {
       margin-right: $grid-spacing;
+      @include media(tablet-port) {
+        padding: 2rem;
+      }
     }
   }
 
   .col-1-of-4 {
     width: calc((100% - 3 * #{$grid-spacing}) / 4);
     display: inline-block;
+    @include media(tablet-port) {
+      margin-left: 2rem;
+    }
+    @include media(phone) {
+      width: calc((100% - 3 * #{$grid-spacing}) / 1.5);
+      margin-bottom: 6rem;
+      margin-right: 0;
+    }
     &:not(:last-child) {
       margin-right: 5.5rem;
+      @include media(tablet-port) {
+        margin-right: 2rem;
+      }
     }
   }
 }

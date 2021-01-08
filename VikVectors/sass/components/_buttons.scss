@@ -90,11 +90,21 @@
   color: $color-purple-dark;
   font-family: inherit;
   background-color: transparent;
+  @include media(phone) {
+    font-size: 1rem;
+    color: $color-white;
+    border: 1px solid $color-white;
+  }
   &:hover {
     background-color: $color-purple-dark;
     color: white;
   }
   &:active {
     outline: none;
+  }
+}
+.card-btn {
+  @include media(phone) {
+    padding: 1.5rem 1rem !important;
   }
 }

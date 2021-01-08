@@ -6,6 +6,13 @@
   border-radius: 2px;
   box-shadow: 0 1rem 2rem rgba($color-black, $alpha: 0.55);
   transition: all 0.2s;
+  width: 100%;
+  height: auto;
+  max-height: 32rem;
+
+  @include media(phone) {
+    overflow: scroll;
+  }
 
   &-img {
     width: 25%;

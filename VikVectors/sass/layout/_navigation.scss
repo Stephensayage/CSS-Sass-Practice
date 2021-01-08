@@ -15,6 +15,12 @@
     box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.15);
     text-align: center;
     cursor: pointer;
+    @include media(phone) {
+      height: 5rem;
+      width: 5rem;
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &-btn:hover &-icon::before {
@@ -35,6 +41,12 @@
     opacity: 0.9;
     z-index: 2000;
     transition: transform 0.7s ease;
+    @include media(phone) {
+      height: 4rem;
+      width: 4rem;
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
 
   &-ctn {
@@ -57,6 +69,12 @@
     left: 75%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: none;
+    @include media(phone) {
+      top: 40%;
+      left: 55%;
+      transform: translate(-35%, -50%);
+    }
   }
 
   &-li {
@@ -93,6 +111,9 @@
   &-icon {
     position: relative;
     margin-top: 3.3rem;
+    @include media(phone) {
+      margin-top: 2.5rem;
+    }
     &,
     &::before,
     &::after {
@@ -100,6 +121,9 @@
       height: 2px;
       background-color: $color-black;
       display: inline-block;
+      @include media(phone) {
+        width: 2.5rem;
+      }
     }
 
     &::before,
@@ -125,6 +149,9 @@
   &-checkbox:checked ~ &-ctn {
     opacity: 1;
     width: 100%;
+  }
+  &-checkbox:checked ~ &-ctn &-ul {
+    display: inline-block;
   }
   &-checkbox:checked + &-btn &-icon {
     background-color: transparent;

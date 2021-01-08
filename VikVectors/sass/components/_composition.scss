@@ -1,6 +1,11 @@
 .composition {
   position: relative;
 
+  @include media(phone) {
+    margin-top: -3rem;
+    margin-left: 3rem;
+  }
+
   &_photo {
     width: 50%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.35);
@@ -12,6 +17,9 @@
     &_p1 {
       top: -1rem;
       left: 0;
+      @include media(phone) {
+        top: 1rem;
+      }
     }
     &_p2 {
       right: 3rem;

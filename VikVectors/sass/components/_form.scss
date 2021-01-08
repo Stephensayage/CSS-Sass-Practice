@@ -72,6 +72,9 @@
     border-radius: 50%;
     left: 0;
     top: -0.4rem;
+    @include media(phone) {
+      border: 1px solid $color-white;
+    }
     &::after {
       height: 1.2rem;
       width: 1.2rem;
@@ -85,6 +88,9 @@
       background-color: $color-purple-dark;
       opacity: 0;
       transition: all 0.2s;
+      @include media(phone) {
+        background-color: $color-white;
+      }
     }
   }
   &-radio-input:checked ~ &-radio-label &-radio-btn::after {

@@ -6,9 +6,26 @@
   box-sizing: inherit;
 }
 html {
+  //font size will define what 1 rem is (1 rem = 10px / 10px/16px = 62.5%)
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include media(tablet-land) {
+    font-size: 56.25%; // has to come first
+  }
+  @include media(tablet-port) {
+    // 1rem = 8px / 8/16px = 50%
+    font-size: 50%;
+  }
+  @include media(laptop) {
+    font-size: 75%;
+  }
 }
 body {
   box-sizing: border-box;
+  padding: 2.5rem;
+
+  @include media(tablet-port) {
+    padding: 0;
+  }
 }

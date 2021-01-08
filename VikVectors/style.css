@@ -8,9 +8,22 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 2.5rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -43,7 +56,6 @@ body {
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.7;
-  padding: 2.5rem;
   color: #777; }
 
 h2 {
@@ -70,6 +82,10 @@ h2 {
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: ease-out; }
+  @media (max-width: 37.5em) {
+    .title-main {
+      font-size: 5rem;
+      letter-spacing: 0.5rem; } }
 
 .title-sec {
   display: block;
@@ -91,6 +107,12 @@ h2 {
   .heading-secondary-review {
     padding-top: 5rem;
     color: #fff; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 3rem; } }
 
 .heading-tertiary {
   font-size: 1.8rem;
@@ -197,14 +219,27 @@ h2 {
   color: #3726b5;
   font-family: inherit;
   background-color: transparent; }
+  @media (max-width: 37.5em) {
+    .btn-form {
+      font-size: 1rem;
+      color: #fff;
+      border: 1px solid #fff; } }
   .btn-form:hover {
     background-color: #3726b5;
     color: white; }
   .btn-form:active {
     outline: none; }
 
+@media (max-width: 37.5em) {
+  .card-btn {
+    padding: 1.5rem 1rem !important; } }
+
 .composition {
   position: relative; }
+  @media (max-width: 37.5em) {
+    .composition {
+      margin-top: -3rem;
+      margin-left: 3rem; } }
   .composition_photo {
     width: 50%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
@@ -215,6 +250,9 @@ h2 {
     .composition_photo_p1 {
       top: -1rem;
       left: 0; }
+      @media (max-width: 37.5em) {
+        .composition_photo_p1 {
+          top: 1rem; } }
     .composition_photo_p2 {
       right: 3rem;
       top: 2rem; }
@@ -235,7 +273,13 @@ h2 {
   padding: 2rem;
   border-radius: 2px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.55);
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  width: 100%;
+  height: auto;
+  max-height: 32rem; }
+  @media (max-width: 37.5em) {
+    .feature-box {
+      overflow: scroll; } }
   .feature-box-img {
     width: 25%;
     margin-bottom: 0.5rem; }
@@ -328,6 +372,9 @@ h2 {
   .card_price-value {
     font-size: 5rem;
     font-weight: 100; }
+    @media (max-width: 37.5em) {
+      .card_price-value {
+        font-size: 3.5rem; } }
 
 .review {
   width: 75%;
@@ -339,6 +386,9 @@ h2 {
   padding-left: 7rem;
   font-size: 1.2rem;
   transform: skewX(-10deg); }
+  @media (max-width: 37.5em) {
+    .review {
+      transform: none; } }
   .review-shape {
     width: 10rem;
     height: 10rem;
@@ -347,10 +397,17 @@ h2 {
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(10deg); }
+    @media (max-width: 37.5em) {
+      .review-shape {
+        margin-right: 1rem;
+        transform: none; } }
   .review-image {
     width: 100%; }
   .review-text {
     transform: skewX(10deg); }
+    @media (max-width: 37.5em) {
+      .review-text {
+        transform: none; } }
 
 .reviews-video {
   position: absolute;
@@ -423,6 +480,9 @@ h2 {
   border-radius: 50%;
   left: 0;
   top: -0.4rem; }
+  @media (max-width: 37.5em) {
+    .form-radio-btn {
+      border: 1px solid #fff; } }
   .form-radio-btn::after {
     height: 1.2rem;
     width: 1.2rem;
@@ -436,6 +496,9 @@ h2 {
     background-color: #3726b5;
     opacity: 0;
     transition: all 0.2s; }
+    @media (max-width: 37.5em) {
+      .form-radio-btn::after {
+        background-color: #fff; } }
 
 .form-radio-input:checked ~ .form-radio-label .form-radio-btn::after {
   opacity: 1; }
@@ -467,20 +530,45 @@ h2 {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
     clear: both; }
+  @media (max-width: 56.25em) {
+    .row {
+      width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2);
     float: left; }
+    @media (max-width: 37.5em) {
+      .row .col-1-of-2 {
+        width: calc((100% - 6rem) / 1);
+        margin-bottom: 10rem;
+        margin-left: 3rem; } }
     .row .col-1-of-2:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row .col-1-of-2:not(:last-child) {
+          padding: 2rem; } }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4);
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .row .col-1-of-4 {
+        margin-left: 2rem; } }
+    @media (max-width: 37.5em) {
+      .row .col-1-of-4 {
+        width: calc((100% - 3 * 6rem) / 1.5);
+        margin-bottom: 6rem;
+        margin-right: 0; } }
     .row .col-1-of-4:not(:last-child) {
       margin-right: 5.5rem; }
+      @media (max-width: 56.25em) {
+        .row .col-1-of-4:not(:last-child) {
+          margin-right: 2rem; } }
 
 .footer {
   background-color: #1c1453;
@@ -491,8 +579,15 @@ h2 {
     border-top: 1px solid #f1f1f1;
     display: inline-block;
     padding-top: 2rem; }
+    @media (max-width: 37.5em) {
+      .footer-list {
+        width: 100%;
+        text-align: center; } }
   .footer-ul {
     list-style: none; }
+    @media (max-width: 37.5em) {
+      .footer-ul {
+        width: 120; } }
   .footer-li {
     display: inline-block; }
     .footer-li:not(:last-child) {
@@ -515,6 +610,9 @@ h2 {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
     .footer-logo:hover, .footer-logo:active {
       transform: rotate(5deg) scale(1.3); }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 5rem; } }
 
 .terms {
   border-top: 1px solid #f1f1f1;
@@ -524,6 +622,11 @@ h2 {
   float: right;
   font-size: 1rem;
   font-weight: 100; }
+  @media (max-width: 37.5em) {
+    .terms {
+      float: none;
+      width: 100%;
+      text-align: center; } }
 
 .navigation-checkbox {
   display: none; }
@@ -540,6 +643,12 @@ h2 {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .navigation-btn {
+      height: 5rem;
+      width: 5rem;
+      top: 4rem;
+      right: 4rem; } }
 
 .navigation-btn:hover .navigation-icon::before {
   top: -1rem; }
@@ -558,6 +667,12 @@ h2 {
   opacity: 0.9;
   z-index: 2000;
   transition: transform 0.7s ease; }
+  @media (max-width: 37.5em) {
+    .navigation-background {
+      height: 4rem;
+      width: 4rem;
+      top: 4.5rem;
+      right: 4.5rem; } }
 
 .navigation-ctn {
   height: 100vh;
@@ -576,7 +691,13 @@ h2 {
   top: 40%;
   left: 75%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+  display: none; }
+  @media (max-width: 37.5em) {
+    .navigation-ul {
+      top: 40%;
+      left: 55%;
+      transform: translate(-35%, -50%); } }
 
 .navigation-li {
   margin: 3rem;
@@ -601,11 +722,17 @@ h2 {
 .navigation-icon {
   position: relative;
   margin-top: 3.3rem; }
+  @media (max-width: 37.5em) {
+    .navigation-icon {
+      margin-top: 2.5rem; } }
   .navigation-icon, .navigation-icon::before, .navigation-icon::after {
     width: 3rem;
     height: 2px;
     background-color: #000;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .navigation-icon, .navigation-icon::before, .navigation-icon::after {
+        width: 2.5rem; } }
   .navigation-icon::before, .navigation-icon::after {
     position: absolute;
     left: 0;
@@ -622,6 +749,9 @@ h2 {
 .navigation-checkbox:checked ~ .navigation-ctn {
   opacity: 1;
   width: 100%; }
+
+.navigation-checkbox:checked ~ .navigation-ctn .navigation-ul {
+  display: inline-block; }
 
 .navigation-checkbox:checked + .navigation-btn .navigation-icon {
   background-color: transparent; }
@@ -674,3 +804,14 @@ h2 {
   .book-form {
     width: 50%;
     padding: 5rem; }
+    @media (max-width: 56.25em) {
+      .book-form {
+        width: 100%; } }
+  @media (max-width: 56.25em) {
+    .book {
+      margin: 5rem; } }
+  @media (max-width: 56.25em) {
+    .book {
+      height: 55rem;
+      margin: 2rem;
+      background-image: linear-gradient(#7209b7, #1c1453); } }
